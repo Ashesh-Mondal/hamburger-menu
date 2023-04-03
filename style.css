@@ -19,7 +19,8 @@ li{
     padding-bottom: 10px;
     background: #232323;
     color: #fff;
-    width: 300px;
+    max-width: 300px;
+    width: 90%;
     border-radius: 20px;
     transition: transform 0.5s ease-in-out;
 }
@@ -73,4 +74,26 @@ li{
 
 .hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line{
     background-color: #fff;
+}
+
+.hamburger-lines .line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hamburger-lines .line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+    transform: rotate(45deg);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+    display: none;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+    transform: rotate(-45deg);
 }
